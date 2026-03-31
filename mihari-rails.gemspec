@@ -3,7 +3,7 @@
 require_relative "lib/mihari/rails/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "mihari-rails"
+  spec.name          = "mihari-logger-rails"
   spec.version       = Mihari::Rails::VERSION
   spec.authors       = ["Mihari"]
   spec.email         = ["support@mihari.io"]
@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "Rails integration for the Mihari log transport library"
   spec.description   = "Rack middleware, ActiveSupport log subscribers, and Rails " \
                         "auto-configuration for shipping structured logs to Mihari."
-  spec.homepage      = "https://github.com/mihari-io/mihari-rails"
+  spec.homepage      = "https://github.com/mihari-io/mihari-logger-rails"
   spec.license       = "MIT"
 
   spec.required_ruby_version = ">= 3.0.0"
@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "mihari-ruby", "~> 0.1"
+  spec.add_dependency "mihari-logger", "~> 0.1"
   spec.add_dependency "railties",    ">= 6.1", "< 8.0"
 
   spec.add_development_dependency "bundler",   "~> 2.0"

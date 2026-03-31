@@ -19,7 +19,7 @@ module Mihari
           **config.to_transport_options
         )
       rescue LoadError => e
-        ::Rails.logger.error("[Mihari] Failed to load mihari-ruby gem: #{e.message}")
+        ::Rails.logger.error("[Mihari] Failed to load mihari-logger gem: #{e.message}")
       rescue StandardError => e
         ::Rails.logger.error("[Mihari] Failed to initialize transport: #{e.message}")
       end

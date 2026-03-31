@@ -7,7 +7,7 @@ Rails integration for the [Mihari](https://mihari.io) structured log transport l
 Add to your Gemfile:
 
 ```ruby
-gem "mihari-rails"
+gem "mihari-logger-rails"
 ```
 
 Then run:
