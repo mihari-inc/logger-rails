@@ -24,4 +24,4 @@ jobs:
         run: gem build mihari-rails.gemspec
 
       - name: Push gem
-        run: gem push mihari-rails-*.gem
+        run: gem push mihari-logger-rails-*.gem
