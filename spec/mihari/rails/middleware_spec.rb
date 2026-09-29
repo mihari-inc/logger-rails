@@ -52,12 +52,16 @@ RSpec.describe Mihari::Rails::Middleware do
     end
 
     it "captures duration in milliseconds" do
+      # L'horloge est figée : une app de test répond en moins de 0,005 ms, donc
+      # l'arrondi au centième renvoie 0.0 et un `> 0` échoue selon la machine.
+      allow(middleware).to receive(:clock_monotonic).and_return(1.0, 1.25)
+
       middleware.call(env)
 
       expect(mock_logger).to have_received(:log).with(
         hash_including(
           http: hash_including(
-            duration_ms: a_value > 0
+            duration_ms: 250.0
           )
         )
       )
